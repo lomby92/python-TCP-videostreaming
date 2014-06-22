@@ -1,7 +1,7 @@
 import socket, cv2, numpy
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
-server_socket.bind((socket.gethostname(),5000))  
+server_socket.bind(('',5000))  
 server_socket.listen(5)
 capture = cv2.VideoCapture(0)
 capture.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, 640)

@@ -1,7 +1,7 @@
 import socket, cv2, numpy
 
 client_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-client_socket.connect((socket.gethostname(),5000))
+client_socket.connect(('192.168.1.235',5000))
 
 while True:
     data=client_socket.recv(4096000)

@@ -4,7 +4,7 @@ client_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 client_socket.connect((socket.gethostname(),5000))
 
 while True:
-    data=client_socket.recv(409600000)
+    data=client_socket.recv(4096000)
     #print data
     a1D = numpy.fromstring(data,dtype=numpy.uint8)
     try:
